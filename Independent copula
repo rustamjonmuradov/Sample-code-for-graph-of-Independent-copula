@@ -1,0 +1,9 @@
+> library(copula)
+> d<-2
+> ic<-indepCopula(dim=d)
+> set.seed(2008)
+> u<-runif(d)
+> (Pi<-pCopula(u,copula=ic))
+[1] 0.3668219
+> wireframe2 (ic, FUN = pCopula, col.4 = adjustcolor("blue", alpha.f = 0.25))
+> contourplot2(ic, FUN = pCopula)
